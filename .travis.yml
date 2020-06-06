@@ -2,8 +2,8 @@ language: C
 before_script:
  - powershell -command "New-Item -Path c:\temp -ItemType Directory"
  - powershell -command "Invoke-WebRequest -Uri https://www.cygwin.com/setup-x86_64.exe -OutFile c:\temp\setup-x86_64.exe"
- - dir c:\temp
- - c:\temp\setup-x86_64.exe --quiet-mode --disable-buggy-antivirus --upgrade-also --wait --arch="x86" --root="c:\cygwin" --only-site --site="ftp://ftp.cse.yzu.edu.tw/pub/cygwin/" --packages="bash,p7zip,libssl-devel,git,gcc-core,make,diff,autoconf,automake,m4,libtool,libncurses-devel,libreadline-devel" --verbose --no-admin
+ - dir c:\\temp
+ - c:\\temp\\setup-x86_64.exe --quiet-mode --disable-buggy-antivirus --upgrade-also --wait --arch="x86" --root="c:\\cygwin" --only-site --site="ftp://ftp.cse.yzu.edu.tw/pub/cygwin/" --packages="bash,p7zip,libssl-devel,git,gcc-core,make,diff,autoconf,automake,m4,libtool,libncurses-devel,libreadline-devel" --verbose --no-admin
 addons:
   apt:
     update: true
