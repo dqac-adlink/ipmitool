@@ -1,6 +1,7 @@
 language: C
 before_script:
- - ./bootstrap
+ - powershell -command "New-Item -Path c:\temp -ItemType Directory"
+ - powershell -command "Invoke-WebRequest -Uri https://www.cygwin.com/setup-x86_64.exe -OutFile c:\temp\setup-x86_64.exe"
 addons:
   apt:
     update: true
