@@ -16,11 +16,5 @@ addons:
 matrix:
   include:
     - os: windows
-      addons:
-        apt:
-          packages:
-            - libsystemd-dev
       script:
-        - ./configure --enable-intf-dummy --enable-intf-dbus
-        - make
-        - sudo make install
+        - c:\cygwin\bin\bash --login "pwd"
