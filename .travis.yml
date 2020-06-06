@@ -4,17 +4,9 @@ before_script:
  - powershell -command "Invoke-WebRequest -Uri https://www.cygwin.com/setup-x86_64.exe -OutFile c:\temp\setup-x86_64.exe"
  - dir c:\\temp
  - c:\\temp\\setup-x86_64.exe --quiet-mode --disable-buggy-antivirus --upgrade-also --wait --arch="x86" --root="c:\\cygwin" --only-site --site="http://cygwin.mirror.constant.com/" --packages="bash,p7zip,libssl-devel,git,gcc-core,make,diff,autoconf,automake,m4,libtool,libncurses-devel,libreadline-devel" --verbose --no-admin
-addons:
-  apt:
-    update: true
-    packages:
-      - libssl-dev
-  homebrew:
-    packages:
-      - openssl
 
 matrix:
   include:
     - os: windows
       script:
-        - c:\cygwin\bin\bash --login "pwd"
+        - c:\\cygwin\\bin\\bash --login "pwd"
